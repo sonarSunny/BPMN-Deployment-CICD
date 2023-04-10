@@ -25,8 +25,5 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo I have run the git action on development branch successfully.
-        
       - name: HTTP Request Action
         run : curl https://reqres.in/api/users?page=2
