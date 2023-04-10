@@ -27,3 +27,15 @@ jobs:
       # Runs a single command using the runners shell
       - name: HTTP Request Action
         run : curl https://reqres.in/api/users?page=2
+        
+      - name: Camunda Deploy BPMN
+  # You may pin to the exact commit or the version.
+  # uses: amardeep2006/camunda-deploy-bpmn-action@ed59544ae258d7512bede319baf022c4f5a373d0
+      - uses: amardeep2006/camunda-deploy-bpmn-action@v1
+        with:
+          # Camunda api end point url
+          CAMUNDA_ENDPOINT_URL: http://localhost:8080/engine-rest/deployment/create
+          # Api user name for basic auth
+          CAMUNDA_AUTH_USERNAME: demo
+          # Password for api user for basic auth
+          CAMUNDA_AUTH_PASSWORD: demo
