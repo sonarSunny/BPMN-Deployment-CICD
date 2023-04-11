@@ -25,8 +25,8 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: HTTP Request Action
-        run : curl https://reqres.in/api/users?page=2
+      - name: Changed files
+        run : echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | xargs)"
         
       - name: Upload Files
         run: |
