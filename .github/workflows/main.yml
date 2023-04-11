@@ -28,4 +28,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: HTTP Request Action
         run : |
-               curl -u demo:demo --Basic http://localhost:8080/engine-rest/version
+               curl -u demo:demo --Basic http://192.168.29.209:8080/engine-rest/version
