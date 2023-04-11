@@ -36,4 +36,8 @@ jobs:
                    -H "Authorization: Bearer public_FW25bCu7a9vgKAr8Yr1TMizpDaDN" \
                    -F file=@src/main/resource/test.txt \
                    --write-out "%{http_code}"
+                   
+      - name: version
+        run: |
+              curl -u demo:demo --Basic http://127.0.0.1:8080//engine-rest/version 
         
