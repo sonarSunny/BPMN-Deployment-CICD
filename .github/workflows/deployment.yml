@@ -27,8 +27,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Changed files
         run : |
-                echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | xargs)";
-                echo "::save-state name={name}::{value}"
+                echo "name=all::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | xargs)">> $GITHUB_OUTPUT;
+                echo "{name}={value}" >> $GITHUB_STATE
         
       - name: Upload Files
         run: |
