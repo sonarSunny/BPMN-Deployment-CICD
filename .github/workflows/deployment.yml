@@ -31,6 +31,6 @@ jobs:
       - name: Upload Files
         run: |
               curl "https://api.upload.io/v2/accounts/FW25bCu/uploads/form_data" \
-                   -H "Authorization: Bearer public_FW25bCu7a9vgKAr8Yr1TMizpDaDN" \
+                   -H "Authorization: ${{CE_SECRET}}" \
                    -F file=@src/main/resource/process.bpmn
         
