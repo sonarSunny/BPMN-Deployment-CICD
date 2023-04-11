@@ -28,6 +28,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: HTTP Request Action
         run : |
-               curl -w "\n" \
-                -H "Accept: application/json" \
-                 http://localhost:8080/engine-rest/version
+               curl -u demo:demo --Basic http://localhost:8080/engine-rest/version
