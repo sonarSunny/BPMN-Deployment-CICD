@@ -39,5 +39,5 @@ jobs:
                    
       - name: version
         run: |
-              curl -u demo:demo --Basic http://127.0.0.1:8080//engine-rest/version 
+              curl -u demo:demo --Basic http://192.168.29.209:8080/engine-rest/version
         
