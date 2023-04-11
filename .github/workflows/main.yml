@@ -28,4 +28,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: HTTP Request Action
         run : |
-               curl -u demo:demo --Basic http://192.168.29.209:8080/engine-rest/version
+               curl "https://api.upload.io/v2/accounts/FW25bCu/uploads/form_data" \
+                     -H "Authorization: Bearer public_FW25bCu7a9vgKAr8Yr1TMizpDaDN" \
+                     -F file=@image.jpg
