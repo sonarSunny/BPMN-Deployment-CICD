@@ -27,17 +27,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: HTTP Request Action
         run : |
-               curl "http://localhost:8080/engine-rest/version" ^
-                -H "Accept-Language: en-US" ^
-                -H "Connection: keep-alive" ^
-                -H "Sec-Fetch-Dest: empty" ^
-                -H "Sec-Fetch-Mode: cors" ^
-                -H "Sec-Fetch-Site: cross-site" ^
-                -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) CamundaModeler/5.8.0 Chrome/108.0.5359.62 Electron/22.0.0 Safari/537.36" ^
-                -H "accept: application/json" ^
-                -H "authorization: undefined" ^
-                -H "sec-ch-ua: ^\^"Not?A_Brand^\^";v=^\^"8^\^", ^\^"Chromium^\^";v=^\^"108^\^"" ^
-                -H "sec-ch-ua-mobile: ?0" ^
-                -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
-                --compressed
-
+               curl -w "\n" \
+                -H "Accept: application/json" \
+                 http://localhost:8080/engine-rest/version
