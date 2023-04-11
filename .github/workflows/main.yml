@@ -27,5 +27,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: HTTP Request Action
         run : |
-               curl -H "Authorization: Basic ZGVtbzpkZWIv" https://dev2.m2digitalbroker.com/bs2/workflow/v1/engine-rest/version
+               curl -U demo:demo --Basic https://dev2.m2digitalbroker.com/bs2/workflow/v1/engine-rest/version
 
